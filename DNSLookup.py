@@ -8,11 +8,13 @@ def matchRTT(outValue):
     pattern = re.compile(r'\d+')
     match=re.search(pattern, match.group())
     return match.group()
-    
+
+# Default dns server in SJTU 
 localDnsServer = '202.120.2.101'
 rttList = []
 i=0
 while i<100:
+    # Generate random domain name
     hostname = 'www.' + ''.join(map(lambda xx:(hex(ord(xx))[2:]),os.urandom(4)))+'.com'
     command = 'dig @' + localDnsServer + ' ' + hostname + ' +nocomments +noanswer +noquestion +noauthority +norecurse'
     p = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
