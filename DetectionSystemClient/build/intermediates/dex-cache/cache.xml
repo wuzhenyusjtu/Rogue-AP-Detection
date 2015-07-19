@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/DetectionSystemClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/DetectionSystemClient/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-ba75eae4e50d3f17e0a8facfd3bb007d04dc3828.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/Desktop/DetectionSystemClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
+        <dex dex="/Users/wuzhenyu/Desktop/DetectionSystemClient/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-0c16e7bd9c6ccb297dacb3e4d49fa169e6a75577.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/DetectionSystemClient/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-f17f98884e82388d63bd4a2e3fe66d089364c1fa.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/Desktop/DetectionSystemClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/wuzhenyu/Desktop/DetectionSystemClient/app/build/intermediates/pre-dexed/debug/classes-503d5a42abd9d9203afbf305c3846182483c7739.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/Desktop/DetectionSystemClient/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/wuzhenyu/Desktop/DetectionSystemClient/app/build/intermediates/pre-dexed/debug/classes-cebe2c71409194f2b82fd59f3fcfe793087ef193.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/DetectionSystemClient/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d84409890828e07d344a3b9b1da545dba9897b51">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/DetectionSystemClient/app/build/intermediates/pre-dexed/debug/classes-4c8fb58f310280736456b9c4ca5fcb9b72b719db.jar" />
+    </item>
+    <item
+        jar="/Users/wuzhenyu/AndroidStudioProjects/DetectionSystemClient/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
+        <dex dex="/Users/wuzhenyu/AndroidStudioProjects/DetectionSystemClient/app/build/intermediates/pre-dexed/debug/classes-0cf6922b3502f6fa7ff0b188518a0c72ddf588df.jar" />
+    </item>
+
+</items>
