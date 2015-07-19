@@ -24,6 +24,7 @@ web.config.session_parameters['ignore_change_ip'] = True
 web.config.session_parameters['secret_key'] = ''.join(map(lambda xx:(hex(ord(xx))[2:]),os.urandom(16)))
 web.config.session_parameters['expired_message'] = 'Warning: Session Expired'
 
+# Define urls and the corresponding handlers 
 urls = (
     '/register', 'Register',
     '/login', 'Login',
@@ -222,6 +223,8 @@ class UpdateAuthorizedAPList:
 def verifyAuthorizedFeatures(authorizedAPDict):
     return False
 
+# We haven't work out the following functions
+# The following function are the core of the detection system, where we compute route, location, rtt evaluation and credit
 '''
 def computeLocation(APPosition,neighborAPs):
 def computeRoute(routeInfo):
