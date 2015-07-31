@@ -38,22 +38,25 @@ urls = (
 )
 
 app = web.application(urls,globals())
-#session = web.session.Session(app, web.session.DBStore('RogueAPDetection'), initializer={'logged_in': 0})
 t_globals = {
     'datestr': web.datestr,
     'cookie' : web.cookies,
 }
+
+# Replace the following path with the real path of templates on your computer
 render = web.template.render('/Users/wuzhenyu/Desktop/templates/', base='base', globals=t_globals)
 
-
+# Connect to the database
 db = web.database(dbn='mysql', db='RogueAPDetection', user='root')
 store = web.session.DBStore(db, 'Sessions')
 session = web.session.Session(app, store,initializer={'logged_in': False})
 
+# Redirect to this page when user's operation failed
 class Fail:
     def GET(self, operation):
         return render.fail(operation)
 
+# Redirect to this page when user's operation succeeded
 class Success:
     def GET(self, operation):
         return render.success(operation)
@@ -77,7 +80,8 @@ class Login:
             web.setcookie('username', username)
             session.logged_in=True
             raise web.seeother('/success/login')
-            
+
+# Connect to the database to verify the username & password
 def verifyLogin(username,password):
     return True;
 
@@ -112,6 +116,8 @@ class Register:
                 web.setcookie('username', hashlib.md5(username).hexdigest())
                 raise web.seeother('/success/register')
 
+# We need to verify the user's input for registeration
+# For example: length and format of username, password strength...
 def verifyRegister(username,password):
     return False;
         
@@ -145,6 +151,7 @@ class SendApFeatures:
         else:
             raise web.seeother('/success/sendAPFeatures')
 
+# We need to verify the features received, if contains empty or overflowing strings
 def verifyFeatures(featuresDict):
     return True
 
@@ -154,7 +161,7 @@ class SendApQuery:
         web.form.Button('Query'),
     )
     def GET(self):
-        if session.logged_in == False:
+        if session.logged_in == True:
             form = self.query_form()
             return render.apQuery(form)
         else:
@@ -167,11 +174,13 @@ class SendApQuery:
         else:
             raise web.seeother('/success/sendAPQuery')
 
+# We need to verify if the format of BSSID is legal
 def verifyAPQuery(bssid):
     return False
 
 class SendRTTValue:
     rtt_form = web.form.Form(
+    # For test only, we haven't found a proper way to receive a list of values
         web.form.Textbox('BSSID',web.form.notnull,size=17),
         web.form.Textarea('Value',web.form.notnull,rows=10,cols=80,description='RTTValueList'),
         web.form.Button('Submit'),
@@ -191,6 +200,7 @@ class SendRTTValue:
         else:
             raise web.seeother('/success/sendRTTValue')
 
+# We need to verify the rtt value collected
 def verifyRTTValue(bssid, rttValue):
     return False
     
@@ -220,6 +230,7 @@ class UpdateAuthorizedAPList:
         else:
             raise web.seeother('/success/updateAuthorizedAPList')
 
+# We need to verify the format of authorized features
 def verifyAuthorizedFeatures(authorizedAPDict):
     return False
 
