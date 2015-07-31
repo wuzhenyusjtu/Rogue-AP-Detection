@@ -135,7 +135,9 @@ class SendApFeatures:
         web.form.Button('Submit'),
     )
     def GET(self):
-        if session.logged_in == True:
+        # Only for test
+        # if session.logged_in == True:
+        if session.logged_in == False:
             form = self.features_form()
             return render.apFeatures(form)
         else:
