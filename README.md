@@ -17,5 +17,5 @@ Client:<br />
   Please notice that Android SDK installing packages are blocked. You have to turn to VPN or proxy for help.<br />
   developer.android.com is blocked too. Fortunately, we have an API documentation substitution<br /> http://www.android-doc.com/reference/packages.html.<br />
 <br />
-You can contact me at wu.2880@buckeyemail.osu.com
+You can contact me at wu.2880@buckeyemail.osu.edu
   
